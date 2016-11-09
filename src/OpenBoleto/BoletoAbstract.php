@@ -398,7 +398,7 @@ abstract class BoletoAbstract
      * @param Agente $cedente
      * @return BoletoAbstract
      */
-    public function setCedente(Agente $cedente)
+    public function setCedente($cedente)
     {
         $this->cedente = $cedente;
         return $this;
@@ -761,7 +761,7 @@ abstract class BoletoAbstract
      * @param Agente $sacado
      * @return BoletoAbstract
      */
-    public function setSacado(Agente $sacado)
+    public function setSacado($sacado)
     {
         $this->sacado = $sacado;
         return $this;
@@ -783,7 +783,7 @@ abstract class BoletoAbstract
      * @param Agente $sacadorAvalista
      * @return BoletoAbstract
      */
-    public function setSacadorAvalista(Agente $sacadorAvalista)
+    public function setSacadorAvalista($sacadorAvalista)
     {
         $this->sacadorAvalista = $sacadorAvalista;
         return $this;
