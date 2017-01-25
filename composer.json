@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "OpenBoleto\\": "src/OpenBoleto"
+            "OpenBoleto\\": "vendor/rick39000/openboleto/src/OpenBoleto"
         }
     }
 }
