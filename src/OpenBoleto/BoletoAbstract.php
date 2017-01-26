@@ -950,7 +950,17 @@ abstract class BoletoAbstract
      */
     public function getValorCobrado()
     {
-        return $this->valorCobrado;
+        if (empty($this->valorCobrado)) {
+            $this->valorCobrado = $this->getValor();
+            if(!empty($this->getDescontosAbatimentos())) $this->valorCobrado -= $this->getDescontosAbatimentos();
+            if(!empty($this->getOutrasDeducoes())) $this->valorCobrado -= $this->getOutrasDeducoes();
+            if(!empty($this->getMoraMulta())) $this->valorCobrado += $this->getMoraMulta();
+            if(!empty($this->getOutrosAcrescimos())) $this->valorCobrado += $this->getOutrosAcrescimos();
+            
+            return $this->valorCobrado;
+        } else {
+            return $this->valorCobrado;
+        }
     }
 
     /**
