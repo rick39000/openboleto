@@ -436,7 +436,7 @@ table.line td.vencimento {
 
 table.line td.valor_doc {
 	/* width: 180px; */
-	width: 255px;
+	width: 600px;
 	padding-right: 5px;
 }
 
